@@ -1,0 +1,19 @@
+name: "Continuous Integration"
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+  
+jobs:
+  windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+  linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
