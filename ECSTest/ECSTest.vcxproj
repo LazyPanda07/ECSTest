@@ -86,9 +86,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Core\Actor\Bot.cpp" />
+    <ClCompile Include="source\Core\Actor\Drone.cpp" />
+    <ClCompile Include="source\Core\Actor\Actor.cpp" />
+    <ClCompile Include="source\Core\Statuses\ArcingCurrentAilment.cpp" />
+    <ClCompile Include="source\Core\Statuses\BaseStatus.cpp" />
+    <ClCompile Include="source\Core\Statuses\Burn.cpp" />
+    <ClCompile Include="source\Core\Statuses\Crit.cpp" />
+    <ClCompile Include="source\Core\Statuses\Irradiation.cpp" />
+    <ClCompile Include="source\Core\Statuses\Shatter.cpp" />
+    <ClCompile Include="source\Core\Statuses\Swarm.cpp" />
     <ClCompile Include="source\Main.cpp" />
     <ClCompile Include="source\ECS\ECSTest.cpp" />
     <ClCompile Include="source\Inheritance\InheritanceTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Core\Actor\Actor.h" />
+    <ClInclude Include="include\Core\Actor\Bot.h" />
+    <ClInclude Include="include\Core\Statuses\ArcingCurrentAilment.h" />
+    <ClInclude Include="include\Core\Statuses\BaseStatus.h" />
+    <ClInclude Include="include\Core\Actor\Drone.h" />
+    <ClInclude Include="include\Core\Statuses\Burn.h" />
+    <ClInclude Include="include\Core\Statuses\Crit.h" />
+    <ClInclude Include="include\Core\Statuses\Irradiation.h" />
+    <ClInclude Include="include\Core\Statuses\Shatter.h" />
+    <ClInclude Include="include\Core\Statuses\Swarm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
