@@ -33,6 +33,8 @@ jobs:
 
   linux:
     runs-on: ubuntu-latest
+    container:
+      image: lazypanda07/ubuntu_cxx20:24.04
 
     steps:
     - uses: actions/checkout@v4
