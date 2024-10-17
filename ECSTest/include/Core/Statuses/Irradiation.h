@@ -2,13 +2,13 @@
 
 #include "BaseStatus.h"
 
-class Irraditation : public BaseStatus
+class Irradiation : public BaseStatus
 {
 private:
 	void implementation(float deltaSeconds, Actor& target) override;
 
 public:
-	Irraditation(std::shared_ptr<Actor> target);
+	Irradiation(std::shared_ptr<Actor> target);
 
-	~Irraditation() = default;
+	~Irradiation() = default;
 };

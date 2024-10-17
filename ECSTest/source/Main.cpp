@@ -13,15 +13,16 @@ int main(int argc, char** argv) try
 {
 	using namespace std::chrono_literals;
 
-	if (argc != 2)
+	/*if (argc != 2)
 	{
 		std::cerr << "Wrong number of arguments" << std::endl;
 		std::cerr << "Input number of seconds to test" << std::endl;
 
 		exit(1);
-	}
+	}*/
 
-	size_t seconds = std::stoull(argv[1]);
+	// size_t seconds = std::stoull(argv[1]);
+	size_t seconds = 30;
 
 	printResult(runECSTest(seconds), seconds, "ECS");
 

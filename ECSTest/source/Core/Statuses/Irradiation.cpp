@@ -1,6 +1,6 @@
 #include "Core/Statuses/Irradiation.h"
 
-void Irraditation::implementation(float deltaSeconds, Actor& target)
+void Irradiation::implementation(float deltaSeconds, Actor& target)
 {
 	static float current = 0.0f;
 
@@ -12,7 +12,7 @@ void Irraditation::implementation(float deltaSeconds, Actor& target)
 	}
 }
 
-Irraditation::Irraditation(std::shared_ptr<Actor> target) :
+Irradiation::Irradiation(std::shared_ptr<Actor> target) :
 	BaseStatus(10, target)
 {
 
