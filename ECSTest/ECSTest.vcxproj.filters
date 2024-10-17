@@ -36,7 +36,7 @@
     <ClCompile Include="source\Core\Actor\Bot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Core\Statuses\ArcingCurrentAilment.cpp">
+    <ClCompile Include="source\Core\Statuses\ArcingCurrent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\Core\Statuses\Swarm.cpp">
@@ -74,7 +74,7 @@
     <ClInclude Include="include\Core\Statuses\Irradiation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Core\Statuses\ArcingCurrentAilment.h">
+    <ClInclude Include="include\Core\Statuses\ArcingCurrent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Core\Statuses\Crit.h">

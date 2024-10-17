@@ -89,7 +89,7 @@
     <ClCompile Include="source\Core\Actor\Bot.cpp" />
     <ClCompile Include="source\Core\Actor\Drone.cpp" />
     <ClCompile Include="source\Core\Actor\Actor.cpp" />
-    <ClCompile Include="source\Core\Statuses\ArcingCurrentAilment.cpp" />
+    <ClCompile Include="source\Core\Statuses\ArcingCurrent.cpp" />
     <ClCompile Include="source\Core\Statuses\BaseStatus.cpp" />
     <ClCompile Include="source\Core\Statuses\Burn.cpp" />
     <ClCompile Include="source\Core\Statuses\Crit.cpp" />
@@ -103,7 +103,7 @@
   <ItemGroup>
     <ClInclude Include="include\Core\Actor\Actor.h" />
     <ClInclude Include="include\Core\Actor\Bot.h" />
-    <ClInclude Include="include\Core\Statuses\ArcingCurrentAilment.h" />
+    <ClInclude Include="include\Core\Statuses\ArcingCurrent.h" />
     <ClInclude Include="include\Core\Statuses\BaseStatus.h" />
     <ClInclude Include="include\Core\Actor\Drone.h" />
     <ClInclude Include="include\Core\Statuses\Burn.h" />

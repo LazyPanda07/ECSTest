@@ -12,3 +12,8 @@ void Actor::takeDamage(uint64_t damage)
 {
 	life -= std::min(life, damage);
 }
+
+uint64_t Actor::getLife() const
+{
+	return life;
+}

@@ -15,6 +15,8 @@ public:
 
 	void takeDamage(uint64_t damage);
 
+	uint64_t getLife() const;
+
 	virtual std::string getName() const = 0;
 
 	virtual ~Actor() = default;

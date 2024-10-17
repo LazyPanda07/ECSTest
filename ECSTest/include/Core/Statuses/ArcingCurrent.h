@@ -2,13 +2,13 @@
 
 #include "BaseStatus.h"
 
-class Shatter : public BaseStatus
+class ArcingCurrent : public BaseStatus
 {
 private:
 	void implementation(float deltaSeconds, Actor& target) override;
 
 public:
-	Shatter(std::shared_ptr<Actor> target);
-
-	~Shatter() = default;
+	ArcingCurrent(std::shared_ptr<Actor> target);
+	
+	~ArcingCurrent() = default;
 };
