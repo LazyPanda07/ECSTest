@@ -11,9 +11,44 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+  
+    - name: Enable NMake
+      uses: ilammy/msvc-dev-cmd@v1.13.0
+
+    - name: Build
+      run: |
+          mkdir build
+          cd build
+          cmake -G "NMake Makefiles" .. && nmake install
+
+    - name: Run
+      working-directory: build/bin
+      run: .\ECSTest.exe
+
+    - name: Upload test
+      uses: actions/upload-artifact@v4
+      with:
+        name: Windows
+        path: build/bin
 
   linux:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Build
+      run: |
+          mkdir build
+          cd build
+          cmake .. && make install -j $(nproc)
+
+    - name: Run
+      working-directory: build/bin
+      run: ./ECSTest
+
+    - name: Upload test
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux
+        path: build/bin
