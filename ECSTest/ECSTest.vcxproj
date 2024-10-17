@@ -86,6 +86,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\ECS\Systems\BurnSystem.h" />
     <ClCompile Include="source\Core\Actor\Bot.cpp" />
     <ClCompile Include="source\Core\Actor\Drone.cpp" />
     <ClCompile Include="source\Core\Actor\Actor.cpp" />
@@ -111,6 +112,14 @@
     <ClInclude Include="include\Core\Statuses\Irradiation.h" />
     <ClInclude Include="include\Core\Statuses\Shatter.h" />
     <ClInclude Include="include\Core\Statuses\Swarm.h" />
+    <ClInclude Include="include\ECS\Systems\ArcingCurrentSystem.h" />
+    <ClInclude Include="include\ECS\Systems\BaseStatusSystem.h" />
+    <ClInclude Include="include\ECS\Systems\BaseSystem.h" />
+    <ClInclude Include="include\ECS\Systems\CritSystem.h" />
+    <ClInclude Include="include\ECS\Systems\IrradiationSystem.h" />
+    <ClInclude Include="include\ECS\Systems\ShatterSystem.h" />
+    <ClInclude Include="include\ECS\Systems\StatusHolder.h" />
+    <ClInclude Include="include\ECS\Systems\SwarmSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

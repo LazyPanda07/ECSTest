@@ -13,22 +13,18 @@ int main(int argc, char** argv) try
 {
 	using namespace std::chrono_literals;
 
-	/*if (argc != 2)
-	{
-		std::cerr << "Wrong number of arguments" << std::endl;
-		std::cerr << "Input number of seconds to test" << std::endl;
-
-		exit(1);
-	}*/
-
-	// size_t seconds = std::stoull(argv[1]);
 	size_t seconds = 30;
-
-	printResult(runECSTest(seconds), seconds, "ECS");
+	uint64_t ecsTicks = runECSTest(seconds);
+	
+	printResult(ecsTicks, seconds, "ECS");
 
 	std::this_thread::sleep_for(5s);
 
-	printResult(runInheritanceTest(seconds), seconds, "Inheritance");
+	uint64_t inheritanceTicks = runInheritanceTest(seconds);
+
+	printResult(inheritanceTicks, seconds, "Inheritance");
+
+	std::cout << static_cast<double>(ecsTicks) / inheritanceTicks << std::endl;
 
 	return 0;
 }

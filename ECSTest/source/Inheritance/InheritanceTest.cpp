@@ -86,7 +86,7 @@ uint64_t test(bool& stop)
 
 		auto end = std::chrono::high_resolution_clock::now();
 		
-		deltaSeconds = static_cast<double>((end - start).count()) / std::chrono::high_resolution_clock::period::den;
+		deltaSeconds = static_cast<float>((end - start).count()) / std::chrono::high_resolution_clock::period::den;
 
 		ticks++;
 	}
