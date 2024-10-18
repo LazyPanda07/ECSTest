@@ -17,6 +17,8 @@ public:
 	void tick(float deltaSeconds) override;
 
 	void addStatus(BaseStatus&& status) override;
+
+	size_t getSize() const override;
 };
 
 template<typename StatusT>
@@ -32,4 +34,10 @@ template<typename StatusT>
 void BaseStatusSystem<StatusT>::addStatus(BaseStatus&& status)
 {
 	statuses.push_back(std::move(static_cast<StatusT&>(status)));
+}
+
+template<typename StatusT>
+size_t BaseStatusSystem<StatusT>::getSize() const
+{
+	return statuses.size();
 }

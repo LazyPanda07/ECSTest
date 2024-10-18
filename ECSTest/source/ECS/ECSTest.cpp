@@ -62,26 +62,26 @@ uint64_t test(bool& stop)
 
 	for (std::shared_ptr<Actor>& actor : actors)
 	{
-		reinterpret_cast<StatusHolder*>(systems[0].get())->addStatus(ArcingCurrent(actor));
-		reinterpret_cast<StatusHolder*>(systems[0].get())->addStatus(ArcingCurrent(actor));
+		dynamic_cast<StatusHolder*>(systems[0].get())->addStatus(ArcingCurrent(actor));
+		dynamic_cast<StatusHolder*>(systems[0].get())->addStatus(ArcingCurrent(actor));
 
-		reinterpret_cast<StatusHolder*>(systems[1].get())->addStatus(Shatter(actor));
-		reinterpret_cast<StatusHolder*>(systems[1].get())->addStatus(Shatter(actor));
+		dynamic_cast<StatusHolder*>(systems[1].get())->addStatus(Shatter(actor));
+		dynamic_cast<StatusHolder*>(systems[1].get())->addStatus(Shatter(actor));
 
-		reinterpret_cast<StatusHolder*>(systems[2].get())->addStatus(Swarm(actor));
-		reinterpret_cast<StatusHolder*>(systems[2].get())->addStatus(Swarm(actor));
+		dynamic_cast<StatusHolder*>(systems[2].get())->addStatus(Swarm(actor));
+		dynamic_cast<StatusHolder*>(systems[2].get())->addStatus(Swarm(actor));
 
-		reinterpret_cast<StatusHolder*>(systems[3].get())->addStatus(Irradiation(actor));
-		reinterpret_cast<StatusHolder*>(systems[3].get())->addStatus(Irradiation(actor));
+		dynamic_cast<StatusHolder*>(systems[3].get())->addStatus(Irradiation(actor));
+		dynamic_cast<StatusHolder*>(systems[3].get())->addStatus(Irradiation(actor));
 
 		for (size_t i = 0; i < 4; i++)
 		{
-			reinterpret_cast<StatusHolder*>(systems[4].get())->addStatus(Burn(actor));
+			dynamic_cast<StatusHolder*>(systems[4].get())->addStatus(Burn(actor));
 		}
 
 		for (size_t i = 0; i < 7; i++)
 		{
-			reinterpret_cast<StatusHolder*>(systems[5].get())->addStatus(Crit(actor));
+			dynamic_cast<StatusHolder*>(systems[5].get())->addStatus(Crit(actor));
 		}
 	}
 
