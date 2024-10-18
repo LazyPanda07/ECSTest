@@ -55,7 +55,7 @@ uint64_t test(bool& stop)
 		actors.emplace_back(std::make_shared<Drone>());
 	}
 
-	for (size_t i = 0; i < 16; i++)
+	for (size_t i = 0; i < 20; i++)
 	{
 		actors.emplace_back(std::make_shared<Bot>());
 	}
@@ -74,12 +74,12 @@ uint64_t test(bool& stop)
 		dynamic_cast<StatusHolder*>(systems[3].get())->addStatus(Irradiation(actor));
 		dynamic_cast<StatusHolder*>(systems[3].get())->addStatus(Irradiation(actor));
 
-		for (size_t i = 0; i < 4; i++)
+		for (size_t i = 0; i < 6; i++)
 		{
 			dynamic_cast<StatusHolder*>(systems[4].get())->addStatus(Burn(actor));
 		}
 
-		for (size_t i = 0; i < 7; i++)
+		for (size_t i = 0; i < 12; i++)
 		{
 			dynamic_cast<StatusHolder*>(systems[5].get())->addStatus(Crit(actor));
 		}

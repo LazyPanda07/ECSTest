@@ -13,7 +13,7 @@ int main(int argc, char** argv) try
 {
 	using namespace std::chrono_literals;
 
-	size_t seconds = 30;
+	size_t seconds = 60;
 	uint64_t ecsTicks = runECSTest(seconds);
 	
 	printResult(ecsTicks, seconds, "ECS");

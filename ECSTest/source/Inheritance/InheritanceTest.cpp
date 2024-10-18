@@ -38,7 +38,7 @@ uint64_t test(bool& stop)
 		actors.emplace_back(std::make_shared<Drone>());
 	}
 
-	for (size_t i = 0; i < 16; i++)
+	for (size_t i = 0; i < 20; i++)
 	{
 		actors.emplace_back(std::make_shared<Bot>());
 	}
@@ -57,12 +57,12 @@ uint64_t test(bool& stop)
 		actor->addStatus(std::make_shared<Irradiation>(actor));
 		actor->addStatus(std::make_shared<Irradiation>(actor));
 
-		for (size_t i = 0; i < 4; i++)
+		for (size_t i = 0; i < 6; i++)
 		{
 			actor->addStatus(std::make_shared<Burn>(actor));
 		}
 
-		for (size_t i = 0; i < 7; i++)
+		for (size_t i = 0; i < 12; i++)
 		{
 			actor->addStatus(std::make_shared<Crit>(actor));
 		}

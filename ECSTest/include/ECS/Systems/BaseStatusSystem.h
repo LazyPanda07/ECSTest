@@ -33,7 +33,7 @@ void BaseStatusSystem<StatusT>::tick(float deltaSeconds)
 template<typename StatusT>
 void BaseStatusSystem<StatusT>::addStatus(BaseStatus&& status)
 {
-	statuses.push_back(std::move(static_cast<StatusT&>(status)));
+	statuses.push_back(std::move(dynamic_cast<StatusT&>(status)));
 }
 
 template<typename StatusT>
